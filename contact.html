@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Rishabh Inai</title>
+  <meta name="description" content="Get in touch with Rishabh Inai — fraud investigation, AI tool building, systematic trading, and CFE discussions." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .contact-link-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 1.25rem 1.5rem;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .contact-link-card:hover {
+      border-color: var(--navy);
+      box-shadow: 0 4px 16px rgba(15,27,45,0.08);
+    }
+    .cl-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--r-md);
+      background: var(--navy);
+      color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .cl-label { font-size: 0.78rem; color: var(--slate2); margin-bottom: 2px; }
+    .cl-value { font-size: 0.9rem; font-weight: 500; color: var(--navy); }
+    .cl-arrow { margin-left: auto; color: var(--slate2); font-size: 1.1rem; }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Rishabh <span>Inai</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--navy); padding:4rem 2rem 3rem;">
+  <div class="page-wrapper">
+    <p style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Contact</p>
+    <h1 style="font-family:var(--display); font-size:clamp(2rem,4vw,3rem); color:var(--white); margin-bottom:0.8rem; line-height:1.1;">Let's Connect</h1>
+    <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; max-width:480px; line-height:1.7;">
+      Open to conversations on fraud risk, AI-powered forensic tooling, CFE preparation, NSE trading systems, or anything at their intersection.
+    </p>
+    <p style="color:rgba(255,255,255,0.4); font-size:0.8rem; margin-top:0.75rem;">📍 Mumbai, India · Usually responds within 24 hours</p>
+  </div>
+</div>
+
+<section>
+  <div class="page-wrapper">
+    <div class="contact-grid">
+
+      <!-- LEFT: CONNECT LINKS -->
+      <div>
+        <p class="section-eyebrow">Reach Out</p>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">Find Me Here</h2>
+
+        <div style="display:flex; flex-direction:column; gap:0.85rem;">
+          <a href="https://linkedin.com/in/rishabhinai" target="_blank" rel="noopener" class="contact-link-card">
+            <div class="cl-icon">in</div>
+            <div>
+              <div class="cl-label">LinkedIn</div>
+              <div class="cl-value">linkedin.com/in/rishabhinai</div>
+            </div>
+            <div class="cl-arrow">→</div>
+          </a>
+
+          <a href="https://github.com/rishabhinai-netizen" target="_blank" rel="noopener" class="contact-link-card">
+            <div class="cl-icon" style="font-size:0.75rem; font-weight:700;">GH</div>
+            <div>
+              <div class="cl-label">GitHub</div>
+              <div class="cl-value">github.com/rishabhinai-netizen</div>
+            </div>
+            <div class="cl-arrow">→</div>
+          </a>
+
+          <a href="mailto:rishabhinai@gmail.com" class="contact-link-card">
+            <div class="cl-icon">✉</div>
+            <div>
+              <div class="cl-label">Email</div>
+              <div class="cl-value">rishabhinai@gmail.com</div>
+            </div>
+            <div class="cl-arrow">→</div>
+          </a>
+        </div>
+
+        <div style="margin-top:2.5rem;">
+          <p class="section-eyebrow">Good Topics to Discuss</p>
+          <div class="tag-wrap" style="margin-top:0.75rem; gap:8px;">
+            <span class="tag tag-gold">Mortgage Fraud Investigation</span>
+            <span class="tag">AML / PMLA</span>
+            <span class="tag">CFE Exam</span>
+            <span class="tag">AI Tool Building</span>
+            <span class="tag">NSE Systematic Trading</span>
+            <span class="tag">F&O Intelligence</span>
+            <span class="tag">Forensic Analytics</span>
+            <span class="tag">Python / Streamlit</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">BFSI Compliance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: ABOUT + SITEMAP -->
+      <div>
+        <div class="card" style="margin-bottom:1.25rem;">
+          <p style="font-size:0.82rem; color:var(--slate); line-height:1.75; margin-bottom:1.2rem;">
+            I am a Chartered Accountant and fraud investigator based in Mumbai, currently serving as Lead Investigator (Chief Manager) in India's mortgage finance sector. I combine deep forensic domain expertise with AI-powered tool building and systematic equity trading.
+          </p>
+          <p style="font-size:0.82rem; color:var(--slate); line-height:1.75;">
+            I am happy to have conversations about fraud risk methodology, tools I've built, CFE preparation, trading systems, or general BFSI compliance — whether you're a practitioner, a recruiter, or someone building in this space.
+          </p>
+        </div>
+
+        <div style="background:var(--canvas); border:1px solid var(--line); border-radius:var(--r-lg); padding:1.5rem;">
+          <p style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--slate2); margin-bottom:1rem;">Site Map</p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
+            <a href="index.html" style="font-size:0.83rem; color:var(--navy); display:flex; gap:6px; align-items:center; padding:4px 0;">→ Home</a>
+            <a href="portfolio.html" style="font-size:0.83rem; color:var(--navy); display:flex; gap:6px; align-items:center; padding:4px 0;">→ Portfolio</a>
+            <a href="investigation.html" style="font-size:0.83rem; color:var(--navy); display:flex; gap:6px; align-items:center; padding:4px 0;">→ Investigations</a>
+            <a href="tools.html" style="font-size:0.83rem; color:var(--navy); display:flex; gap:6px; align-items:center; padding:4px 0;">→ Tools</a>
+            <a href="markets.html" style="font-size:0.83rem; color:var(--navy); display:flex; gap:6px; align-items:center; padding:4px 0;">→ Markets</a>
+            <a href="blogs.html" style="font-size:0.83rem; color:var(--navy); display:flex; gap:6px; align-items:center; padding:4px 0;">→ Insights</a>
+            <a href="contact.html" style="font-size:0.83rem; color:var(--navy); display:flex; gap:6px; align-items:center; padding:4px 0;">→ Contact</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Rishabh Inai</div>
+      <div class="footer-tagline">CA · CFE · Lead Investigator · AI Tool Builder</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-inner" style="padding-top:0;">
+    <div class="footer-copy">
+      © 2026 Rishabh Inai. All materials are for knowledge-sharing and non-commercial use only. Views expressed are personal and do not represent the views of my employer.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
