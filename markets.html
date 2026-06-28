@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markets & Trading — Rishabh Inai</title>
+  <meta name="description" content="Systematic equity trading, NSE analytics, AlphaRadar scoring engine, CARA F&O Intelligence — Rishabh Inai's market research and trading systems." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .platform-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .platform-header {
+      padding: 1.5rem 1.5rem 1rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .platform-name { font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.3rem; }
+    .platform-sub { font-size: 0.8rem; color: var(--slate2); }
+    .platform-body { padding: 1.25rem 1.5rem; }
+    .platform-body p { font-size: 0.83rem; color: var(--slate); line-height: 1.65; margin-bottom: 0.75rem; }
+    .metric-row { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1rem 1.5rem; background: var(--canvas); border-top: 1px solid var(--line); }
+    .metric { text-align: center; }
+    .metric-val { font-family: var(--display); font-size: 1.4rem; color: var(--navy); }
+    .metric-lbl { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--slate2); }
+    .platform-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; }
+
+    .strategy-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 1.5rem;
+    }
+    .strategy-name { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+    .strategy-desc { font-size: 0.82rem; color: var(--slate2); line-height: 1.65; margin-bottom: 0.75rem; }
+    .win-rate { font-family: var(--display); font-size: 1.8rem; color: var(--gold); }
+    .win-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--slate2); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Rishabh <span>Inai</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html" class="active">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--navy); padding:4rem 2rem 3rem; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; opacity:0.04; background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, white 0px, white 1px, transparent 1px, transparent 40px);"></div>
+  <div class="page-wrapper" style="position:relative;">
+    <p style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Markets & Systematic Trading</p>
+    <h1 style="font-family:var(--display); font-size:clamp(2rem,4vw,3rem); color:var(--white); margin-bottom:0.8rem; line-height:1.1;">NSE · MCX · All Sessions</h1>
+    <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; max-width:560px; line-height:1.7;">
+      Systematic equity and derivatives trading across NSE and MCX — using backtested, data-driven frameworks built on momentum, PEAD, and F&O intelligence. Not speculation — structured systems with defined rules.
+    </p>
+    <div style="display:flex; gap:2rem; margin-top:2rem; flex-wrap:wrap;">
+      <div>
+        <div style="font-family:var(--display); font-size:1.8rem; color:var(--white);">750<span style="color:var(--gold);">+</span></div>
+        <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.06em; color:rgba(255,255,255,0.4); margin-top:2px;">NSE Stocks Scored</div>
+      </div>
+      <div>
+        <div style="font-family:var(--display); font-size:1.8rem; color:var(--white);">~29<span style="color:var(--gold);">%</span></div>
+        <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.06em; color:rgba(255,255,255,0.4); margin-top:2px;">N250F Backtested CAGR</div>
+      </div>
+      <div>
+        <div style="font-family:var(--display); font-size:1.8rem; color:var(--white);">1477</div>
+        <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.06em; color:rgba(255,255,255,0.4); margin-top:2px;">CARA Signal Rows Seeded</div>
+      </div>
+      <div>
+        <div style="font-family:var(--display); font-size:1.8rem; color:var(--white);">82.6<span style="color:var(--gold);">%</span></div>
+        <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.06em; color:rgba(255,255,255,0.4); margin-top:2px;">Banking Bear-Regime Win Rate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLATFORMS -->
+<section>
+  <div class="page-wrapper">
+    <p class="section-eyebrow">Live Platforms</p>
+    <h2 class="section-title">Systems I've Built</h2>
+    <p class="section-sub" style="margin-bottom:2.5rem;">Each platform is live, Supabase-backed, and deployed — not mockups or backtests sitting in a notebook.</p>
+
+    <div class="grid-2">
+
+      <div class="platform-card">
+        <div class="platform-header">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+            <div class="platform-name">AlphaRadar</div>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+          </div>
+          <div class="platform-sub">NSE Equity Scoring Engine · alpharadar.streamlit.app</div>
+        </div>
+        <div class="platform-body">
+          <p>Scores 750+ NSE stocks using a composite methodology drawing from Weinstein Stage Analysis (hard gate at Stage 4), O'Neil/Minervini technical filters, and RS percentile ranking (confirmed 0.91 correlation with alpha). Built from scratch May 2026.</p>
+          <p>Key tabs: Market Pulse (daily health monitoring with Telegram 🚨 staleness alert if &lt;100 rows written), N250F Fortnightly Momentum, Manas Arora VCP/SVRO Scanner (anticipatory entries 9:15–10:30 AM), Nifty Total Market, N500 Strength Ranker.</p>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><div class="metric-val">750<span style="color:var(--gold);">+</span></div><div class="metric-lbl">Stocks Scored</div></div>
+          <div class="metric"><div class="metric-val">~29%</div><div class="metric-lbl">N250F CAGR</div></div>
+          <div class="metric"><div class="metric-val">0.91</div><div class="metric-lbl">RS Correlation</div></div>
+          <div class="metric"><div class="metric-val">100%</div><div class="metric-lbl">Accuracy (15 stocks)</div></div>
+        </div>
+        <div class="platform-footer">
+          <div class="tag-wrap">
+            <span class="tag">Streamlit</span><span class="tag">Supabase</span><span class="tag">Telegram</span><span class="tag">GitHub Actions</span>
+          </div>
+          <a href="https://alpharadar.streamlit.app" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.78rem; padding:7px 14px;">Open →</a>
+        </div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-header">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+            <div class="platform-name">CARA F&O Intelligence</div>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+          </div>
+          <div class="platform-sub">7-Layer F&O Scoring · cara.streamlit.app</div>
+        </div>
+        <div class="platform-body">
+          <p>Regime-adjusted derivatives intelligence platform. 7 scoring layers: L1 OI Trend (±3.0), L2–L3 Regime multiplier (×0.5–1.4), L4 PCR Confirmation (±0.8), L5 F&O Delivery (±0.8), L6 Technical Levels (±1.2), L7 Delivery Value Surge (±0.5). Total score: −6 to +6.</p>
+          <p>Key finding from backtesting: market regime (Bull/Bear ratio) is the dominant predictor of signal reliability. 1,477 signal rows seeded in Supabase; daily pipeline integration underway. Needs 60+ trading days for statistical confidence.</p>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><div class="metric-val">7</div><div class="metric-lbl">Scoring Layers</div></div>
+          <div class="metric"><div class="metric-val">1,477</div><div class="metric-lbl">Signal Rows</div></div>
+          <div class="metric"><div class="metric-val">±6</div><div class="metric-lbl">Score Range</div></div>
+          <div class="metric"><div class="metric-val">Regime</div><div class="metric-lbl">Dominant Signal</div></div>
+        </div>
+        <div class="platform-footer">
+          <div class="tag-wrap">
+            <span class="tag">F&O</span><span class="tag">Supabase</span><span class="tag">Backtested</span>
+          </div>
+          <a href="https://cara.streamlit.app" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.78rem; padding:7px 14px;">Open →</a>
+        </div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-header">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+            <div class="platform-name">NSE Scanner Pro</div>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+          </div>
+          <div class="platform-sub">Multi-Strategy Scanner · nsescannerbyrishabh.streamlit.app</div>
+        </div>
+        <div class="platform-body">
+          <p>Real-time NSE equity scanner using Breeze API data. Stock Quality Index (SQI ≥80) as the primary systematic entry signal. AI-powered analysis via Claude Haiku 4.5 (default) or Sonnet 4.6 (premium toggle). Includes circuit breaker state management, trust scoring, and AI cost logging.</p>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><div class="metric-val">SQI 80</div><div class="metric-lbl">Entry Signal</div></div>
+          <div class="metric"><div class="metric-val">v16<span style="color:var(--gold);">+</span></div><div class="metric-lbl">Version History</div></div>
+          <div class="metric"><div class="metric-val">Breeze</div><div class="metric-lbl">Data Source</div></div>
+        </div>
+        <div class="platform-footer">
+          <div class="tag-wrap">
+            <span class="tag">Streamlit</span><span class="tag">Breeze API</span><span class="tag">Claude API</span>
+          </div>
+          <a href="https://nsescannerbyrishabh.streamlit.app" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.78rem; padding:7px 14px;">Open →</a>
+        </div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-header">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+            <div class="platform-name">ResultsEdge</div>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+          </div>
+          <div class="platform-sub">NSE Earnings Intelligence · 10-Parameter Scoring</div>
+        </div>
+        <div class="platform-body">
+          <p>Earnings intelligence platform for Nifty 200/500 stocks. 10-parameter scoring (S1–S10) including unique walk-the-talk guidance scoring — checks whether management's prior guidance matched actual delivery. Concall PDF parser with Claude API and smart cache (skips already-processed ticker+quarter).</p>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><div class="metric-val">10</div><div class="metric-lbl">Scoring Parameters</div></div>
+          <div class="metric"><div class="metric-val">N200/N500</div><div class="metric-lbl">Coverage</div></div>
+          <div class="metric"><div class="metric-val">Smart Cache</div><div class="metric-lbl">API Optimization</div></div>
+        </div>
+        <div class="platform-footer">
+          <div class="tag-wrap">
+            <span class="tag">Streamlit</span><span class="tag">Claude API</span><span class="tag">Supabase</span>
+          </div>
+          <a href="https://github.com/rishabhinai-netizen/resultsedge" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.78rem; padding:7px 14px;">GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- TRADING STRATEGIES -->
+<section>
+  <div class="page-wrapper">
+    <p class="section-eyebrow">Systematic Strategies</p>
+    <h2 class="section-title">Frameworks I Trade</h2>
+    <p class="section-sub" style="margin-bottom:2.5rem;">Rules-based, backtested approaches — not discretionary guesswork. Each strategy has defined entry criteria, exit rules, and position sizing.</p>
+
+    <div class="grid-3">
+      <div class="strategy-card">
+        <div class="strategy-name">PEAD — Post-Earnings Announcement Drift</div>
+        <div style="margin-bottom:0.75rem;">
+          <div class="win-rate">Primary</div>
+          <div class="win-label">Core Trading Strategy</div>
+        </div>
+        <div class="strategy-desc">Entry only when ResultsEdge score ≥40. Exit within 2 minutes of position open. MCap ≥₹2,000 Cr mandatory. NSE Scanner SQI ≥80 as additional confirmation signal. Logged in TradeOS journal.</div>
+        <div class="tag-wrap">
+          <span class="tag">NSE Equities</span>
+          <span class="tag">Intraday</span>
+          <span class="tag">Score-Gated</span>
+        </div>
+      </div>
+
+      <div class="strategy-card">
+        <div class="strategy-name">N250F Fortnightly Momentum</div>
+        <div style="margin-bottom:0.75rem;">
+          <div class="win-rate">~29%</div>
+          <div class="win-label">Backtested CAGR</div>
+        </div>
+        <div class="strategy-desc">Top-20 stocks from Nifty 250 by AlphaRadar composite score, rebalanced fortnightly. ₹10L → ₹1.66 Cr over backtest period. Top-20 outperforms Top-10 on CAGR, drawdown, and Sharpe. Weinstein Stage Hard Gate applied (Stage 4 capped at score 20).</div>
+        <div class="tag-wrap">
+          <span class="tag">Positional</span>
+          <span class="tag">Fortnightly</span>
+          <span class="tag">Nifty 250</span>
+        </div>
+      </div>
+
+      <div class="strategy-card">
+        <div class="strategy-name">Friday–Monday Strategy</div>
+        <div style="margin-bottom:0.75rem;">
+          <div class="win-rate">67.8%</div>
+          <div class="win-label">Bear-Regime Win Rate</div>
+        </div>
+        <div class="strategy-desc">Bear-regime-only filter applied to a Friday close → Monday open gap strategy. Banking and Infrastructure sectors in bear regime: 82.6% win rate, average +1.12% gross. Deployed with GitHub Actions automation for signal delivery.</div>
+        <div class="tag-wrap">
+          <span class="tag">Bear Regime</span>
+          <span class="tag">Banking</span>
+          <span class="tag">Automated</span>
+        </div>
+      </div>
+
+      <div class="strategy-card">
+        <div class="strategy-name">Manas Arora VCP / SVRO Scanner</div>
+        <div style="margin-bottom:0.75rem;">
+          <div class="win-rate">Anticipatory</div>
+          <div class="win-label">9:15 – 10:30 AM Window</div>
+        </div>
+        <div class="strategy-desc">Volatility Contraction Pattern and Successive Volume Range Oscillator methodology applied to NSE cash equities. Anticipatory entries in the opening hour. Part of AlphaRadar's Manas Arora Scanner tab.</div>
+        <div class="tag-wrap">
+          <span class="tag">VCP</span>
+          <span class="tag">NSE Cash</span>
+          <span class="tag">Opening Range</span>
+        </div>
+      </div>
+
+      <div class="strategy-card">
+        <div class="strategy-name">MSCI India Rebalancing Playbook</div>
+        <div style="margin-bottom:0.75rem;">
+          <div class="win-rate">85.5%</div>
+          <div class="win-label">Pre-Announcement Hit Rate</div>
+        </div>
+        <div class="strategy-desc">Pre-announcement prediction trade based on MSCI rebalancing methodology. Research studied from Rajarshi Shome framework — dominant alpha comes from predicting additions before announcement, not post-announcement momentum.</div>
+        <div class="tag-wrap">
+          <span class="tag">MSCI</span>
+          <span class="tag">Event-Driven</span>
+          <span class="tag">Research-Backed</span>
+        </div>
+      </div>
+
+      <div class="strategy-card">
+        <div class="strategy-name">Donchian Channel System</div>
+        <div style="margin-bottom:0.75rem;">
+          <div class="win-rate">Trend</div>
+          <div class="win-label">Following System</div>
+        </div>
+        <div class="strategy-desc">Systematic Donchian Channel breakout strategy backtested on NSE data. Part of TradeOS historical strategy research. Rules-based entry on channel breakouts with defined risk per trade.</div>
+        <div class="tag-wrap">
+          <span class="tag">Trend Following</span>
+          <span class="tag">Backtested</span>
+          <span class="tag">NSE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-block" style="margin-top:2.5rem;">
+      <p>"Markets reward preparation. Every strategy I trade has a defined hypothesis, a backtested edge, and a clear rule for when to exit — before the trade is entered."</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Rishabh Inai</div>
+      <div class="footer-tagline">CA · CFE · Lead Investigator · AI Tool Builder</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-inner" style="padding-top:0;">
+    <div class="footer-copy">
+      © 2026 Rishabh Inai. Content on this page is for educational and informational purposes only. Nothing here constitutes investment advice. Trade at your own risk.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
