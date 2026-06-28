@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishabh Inai — Fraud Investigator · CA · CFE · AI Tool Builder</title>
+  <meta name="description" content="Rishabh Inai — Chartered Accountant, Certified Fraud Examiner (pursuing), Lead Investigator in financial crime with 7+ years in BFSI. Builder of AI-powered forensic and trading tools." />
+  <meta property="og:title" content="Rishabh Inai — Fraud Investigator · CA · AI Tool Builder" />
+  <meta property="og:description" content="CA · CFE · AML — Lead Investigator in financial crime and builder of AI-powered forensic tools for Indian BFSI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rishabhinai.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── HERO ── */
+    .hero-section {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 4rem 0;
+    }
+    .hero-ledger {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: repeating-linear-gradient(
+        -35deg,
+        var(--navy) 0px,
+        var(--navy) 1px,
+        transparent 1px,
+        transparent 28px
+      );
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+    }
+    .hero-kicker {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.1rem;
+    }
+    .hero-name {
+      font-family: var(--display);
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      color: var(--navy);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+    .hero-creds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1.4rem;
+      min-height: 28px;
+    }
+    .cred-pill {
+      display: inline-block;
+      padding: 4px 12px;
+      border: 1px solid var(--gold);
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--navy2);
+      background: #FFFDF7;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.4s, transform 0.4s;
+    }
+    .cred-pill.visible { opacity: 1; transform: translateY(0); }
+    .hero-bio {
+      font-size: 1rem;
+      color: var(--slate);
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+    .hero-bio strong { color: var(--navy); font-weight: 600; }
+    .hero-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .hero-photo-wrap {
+      width: 200px;
+      height: 240px;
+      border-radius: var(--r-lg);
+      background: var(--tag-bg);
+      border: 2px dashed var(--line2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--slate2);
+      font-size: 0.78rem;
+      text-align: center;
+      gap: 8px;
+    }
+    .hero-photo-wrap svg { opacity: 0.4; }
+    .hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--r-lg);
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--navy);
+      padding: 2.5rem 2rem;
+    }
+    .stats-bar .stat-num { color: var(--white); }
+    .stats-bar .stat-label { color: rgba(255,255,255,0.5); }
+
+    /* ── EXPERTISE TILES ── */
+    .expertise-tile {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 1.5rem;
+      display: block;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .expertise-tile:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 20px rgba(200,149,42,0.12);
+    }
+    .tile-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .tile-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+    }
+    .tile-desc {
+      font-size: 0.82rem;
+      color: var(--slate2);
+      line-height: 1.55;
+    }
+
+    /* ── ACHIEVEMENT CARDS ── */
+    .ach-card {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 1.25rem 1.5rem;
+    }
+    .ach-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .ach-title { font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 0.2rem; }
+    .ach-desc { font-size: 0.82rem; color: var(--slate2); line-height: 1.6; }
+
+    /* ── HERO MOBILE ── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo-wrap { display: none; }
+      .hero-section { min-height: auto; padding: 3rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Rishabh <span>Inai</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero-section">
+  <div class="hero-ledger" aria-hidden="true"></div>
+  <div class="page-wrapper" style="width:100%">
+    <div class="hero-inner">
+      <div>
+        <p class="hero-kicker">Mumbai, India · Financial Crime & Fintech</p>
+        <h1 class="hero-name">Rishabh Inai</h1>
+        <div class="hero-creds" id="credPills" role="text" aria-label="Credentials">
+          <!-- filled by JS -->
+        </div>
+        <p class="hero-bio">
+          <strong>Chartered Accountant</strong> and <strong>Certified Fraud Examiner</strong> with 7+ years investigating mortgage fraud, money laundering, and financial crime across Indian BFSI. I combine deep forensic expertise with AI-powered tool building — from STR/PMLA workflows to live Streamlit apps used by fraud teams.
+        </p>
+        <div class="hero-cta">
+          <a href="portfolio.html" class="btn btn-primary">View Portfolio →</a>
+          <a href="tools.html" class="btn btn-outline">See My Tools</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap" id="photoWrap">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span>Photo coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS BAR ── -->
+<div class="stats-bar">
+  <div class="page-wrapper">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num"><span class="count" data-target="7">0</span><span>+</span></div>
+        <div class="stat-label">Years in BFSI</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span class="count" data-target="54">0</span></div>
+        <div class="stat-label">Fraud Cases Classified</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">₹<span class="count" data-target="244">0</span>M<span>+</span></div>
+        <div class="stat-label">Fraud Portfolio Reviewed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span class="count" data-target="10">0</span><span>+</span></div>
+        <div class="stat-label">AI Tools Built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span class="count" data-target="38">0</span></div>
+        <div class="stat-label">Fraud Typologies Mapped</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span class="count" data-target="750">0</span><span>+</span></div>
+        <div class="stat-label">NSE Stocks Scored</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section>
+  <div class="page-wrapper">
+    <div style="display:grid; grid-template-columns: 1fr 380px; gap: 4rem; align-items: start;">
+      <div>
+        <p class="section-eyebrow">About Me</p>
+        <h2 class="section-title">Forensic Rigour.<br>Technical Edge.</h2>
+        <p style="color:var(--slate); line-height:1.8; margin-bottom:1.2rem;">
+          I am a Chartered Accountant and fraud investigator currently serving as <strong>Lead Investigator (Chief Manager)</strong> in India's mortgage finance sector. My work spans end-to-end fraud investigations, forensic bank statement analysis, regulatory reporting under PMLA and FIU-IND, and building internal audit tools that modernise how fraud teams operate.
+        </p>
+        <p style="color:var(--slate); line-height:1.8; margin-bottom:1.2rem;">
+          Beyond investigations, I am deeply passionate about applying AI and no-code technology to financial crime problems. I have built over ten live tools — including StaffLens, MaturityLens, ValuGuard, and a suite of equity analytics platforms — that combine Python, Supabase, Streamlit, and Claude APIs to solve real problems that no commercial product addresses.
+        </p>
+        <p style="color:var(--slate); line-height:1.8; margin-bottom:1.5rem;">
+          I am currently pursuing the <strong>Certified Fraud Examiner (CFE)</strong> designation and the <strong>AICA Level 2</strong> AI certification from ICAI, alongside active systematic equity trading using my own backtested frameworks.
+        </p>
+        <div class="tag-wrap">
+          <span class="tag">Fraud Investigation</span>
+          <span class="tag">Forensic Accounting</span>
+          <span class="tag">PMLA / AML</span>
+          <span class="tag">FIU-IND Reporting</span>
+          <span class="tag">Mortgage Finance</span>
+          <span class="tag">AI Tool Building</span>
+          <span class="tag">NSE Equity Analytics</span>
+          <span class="tag">Python / Streamlit</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Systematic Trading</span>
+        </div>
+      </div>
+      <div>
+        <div class="quote-block">
+          <p>"The best fraud investigators are part sceptic, part engineer — they don't just find what went wrong, they build systems to stop it happening again."</p>
+        </div>
+        <div class="card card-gold" style="margin-top:1.25rem;">
+          <div style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold); margin-bottom:0.6rem;">Current Focus</div>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem;">
+            <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> CFE Exam — 25-day structured prep, Law domain intensive</li>
+            <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> CARA F&O Dashboard — daily signal pipeline integration</li>
+            <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> ICAI AICA Level 2 — AI certification</li>
+            <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> AlphaRadar — expanding Nifty 500 scoring engine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ── EXPERTISE ── -->
+<section>
+  <div class="page-wrapper">
+    <p class="section-eyebrow">Areas of Expertise</p>
+    <h2 class="section-title">What I Do</h2>
+    <p class="section-sub" style="margin-bottom:2.5rem;">Seven years of applied work across financial crime, regulatory compliance, AI-powered tooling, and systematic equity research.</p>
+    <div class="grid-3">
+      <a href="investigation.html" class="expertise-tile">
+        <span class="tile-icon">🔍</span>
+        <div class="tile-title">Fraud Investigation & Forensics</div>
+        <div class="tile-desc">End-to-end mortgage fraud investigations, STR filing, forensic bank statement analysis, and PMLA compliance across BFSI.</div>
+      </a>
+      <a href="investigation.html" class="expertise-tile">
+        <span class="tile-icon">⚖️</span>
+        <div class="tile-title">Regulatory Compliance & AML</div>
+        <div class="tile-desc">FIU-IND reporting, PMLA obligations, NHB circular compliance, and Early Warning System design for housing finance companies.</div>
+      </a>
+      <a href="tools.html" class="expertise-tile">
+        <span class="tile-icon">🛠️</span>
+        <div class="tile-title">AI-Powered Forensic Tools</div>
+        <div class="tile-desc">No-code and low-code tools for fraud teams — StaffLens, MaturityLens, ValuGuard, DMA scoring engines, and AML knowledge hubs.</div>
+      </a>
+      <a href="markets.html" class="expertise-tile">
+        <span class="tile-icon">📈</span>
+        <div class="tile-title">Equity Research & Trading Systems</div>
+        <div class="tile-desc">AlphaRadar scoring engine (750+ NSE stocks), CARA F&O Intelligence, PEAD-based systematic trading, backtested across NSE/MCX.</div>
+      </a>
+      <a href="tools.html" class="expertise-tile">
+        <span class="tile-icon">🤖</span>
+        <div class="tile-title">AI & Automation</div>
+        <div class="tile-desc">Claude API pipelines, Supabase backends, GitHub Actions automation, Telegram alerting, and context engineering for BFSI workflows.</div>
+      </a>
+      <a href="investigation.html" class="expertise-tile">
+        <span class="tile-icon">🏦</span>
+        <div class="tile-title">Mortgage Finance Risk</div>
+        <div class="tile-desc">38-typology fraud compendium for HFCs, CERSAI integration, mystery shopping programmes, and branch risk scoring frameworks.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ── ACHIEVEMENTS ── -->
+<section>
+  <div class="page-wrapper">
+    <p class="section-eyebrow">Key Achievements</p>
+    <h2 class="section-title">Selected Highlights</h2>
+    <div class="grid-2" style="margin-top:2rem;">
+      <div class="ach-card">
+        <span class="ach-icon">🏆</span>
+        <div>
+          <div class="ach-title">₹244M+ Fraud Portfolio Classified</div>
+          <div class="ach-desc">Investigated and classified 54 fraud cases totalling ₹244.1M, presented at ICICI Group Fraud Prevention Forum across a 12-slide deck shared with senior leadership.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-icon">📋</span>
+        <div>
+          <div class="ach-title">38-Typology Fraud Compendium</div>
+          <div class="ach-desc">Built a comprehensive mortgage fraud reference across 7 categories and 38 typologies — now the internal standard for investigation classification at ICICI HFC.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-icon">🧠</span>
+        <div>
+          <div class="ach-title">10+ AI Tools Deployed for BFSI</div>
+          <div class="ach-desc">Designed, built, and deployed StaffLens, MaturityLens, ValuGuard, DMA Scoring, Branch Risk, Khasra Intelligence — all offline HTML tools used by fraud investigation teams.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-icon">📡</span>
+        <div>
+          <div class="ach-title">AlphaRadar — 750+ Stock Scoring Engine</div>
+          <div class="ach-desc">Built an NSE equity scoring platform using Weinstein/O'Neil/Minervini methodology, validated 100% accuracy across 15 test stocks, with N250F strategy backtested to ~29% CAGR.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-icon">⚖️</span>
+        <div>
+          <div class="ach-title">NHB Refinance Audit — Compliance Gap Identified</div>
+          <div class="ach-desc">Conducted AHF Scheme B refinance audit, identified 7-year tenure cap as a critical compliance gap against NHB Circular No.9/2022-23 regulations.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-icon">🎤</span>
+        <div>
+          <div class="ach-title">ICICI Group Fraud Prevention Forum</div>
+          <div class="ach-desc">Presented fraud intelligence findings to senior leadership — a 12-slide deck covering 54 classified cases and pattern analysis across mortgage fraud categories.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ── CONNECT ── -->
+<section style="background: var(--white); padding: 5rem 0;">
+  <div class="page-wrapper" style="text-align:center; max-width:560px; margin:0 auto;">
+    <p class="section-eyebrow">Let's Connect</p>
+    <h2 class="section-title">Open to Conversations</h2>
+    <p style="color:var(--slate); margin-bottom:2rem; line-height:1.75;">
+      Whether it's fraud risk, AI-powered tooling, NSE trading systems, or CFE-related discussions — I'm happy to connect.
+      Based in Mumbai · Usually responds within 24 hours.
+    </p>
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center;">
+      <a href="https://linkedin.com/in/rishabhinai" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn →</a>
+      <a href="https://github.com/rishabhinai-netizen" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      <a href="contact.html" class="btn btn-outline">Contact Form</a>
+    </div>
+    <p style="font-size:0.75rem; color:var(--slate2); margin-top:1.5rem;">📍 Mumbai, India</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Rishabh Inai</div>
+      <div class="footer-tagline">CA · CFE · Lead Investigator · AI Tool Builder</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-inner" style="padding-top:0;">
+    <div class="footer-copy">
+      © 2026 Rishabh Inai. All materials are for knowledge-sharing and non-commercial use only.
+      Views expressed are personal and do not represent the views of my employer.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Credential pills typewriter
+  const creds = ['CA', 'CFE (Pursuing)', 'AML Specialist', 'Lead Investigator', 'AI Tool Builder', 'AICA Level 2'];
+  const container = document.getElementById('credPills');
+  creds.forEach((c, i) => {
+    const pill = document.createElement('span');
+    pill.className = 'cred-pill';
+    pill.textContent = c;
+    container.appendChild(pill);
+    setTimeout(() => pill.classList.add('visible'), 200 + i * 180);
+  });
+
+  // Counter animation
+  function animateCount(el) {
+    const target = parseInt(el.dataset.target);
+    const duration = 1600;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = Math.floor(current);
+      if (current >= target) clearInterval(timer);
+    }, 16);
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.count').forEach(animateCount);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.stats-grid').forEach(g => observer.observe(g));
+</script>
+</body>
+</html>
