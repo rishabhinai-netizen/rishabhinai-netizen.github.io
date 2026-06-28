@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fraud Investigation & AML — Rishabh Inai</title>
+  <meta name="description" content="Mortgage fraud typologies, AML investigation methodology, PMLA compliance frameworks, and forensic analytics — by Rishabh Inai, CA, CFE." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .typology-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+    .typo-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .typo-header {
+      background: var(--navy);
+      padding: 0.85rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .typo-icon { font-size: 1.2rem; }
+    .typo-title { font-size: 0.88rem; font-weight: 600; color: var(--white); }
+    .typo-count { margin-left:auto; font-size: 0.7rem; color: var(--gold); font-weight: 600; }
+    .typo-body { padding: 1rem 1.2rem; }
+    .typo-body li {
+      font-size: 0.8rem;
+      color: var(--slate);
+      padding: 4px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      gap: 6px;
+    }
+    .typo-body li:last-child { border-bottom: none; }
+    .typo-body li::before { content: "→"; color: var(--gold); flex-shrink: 0; }
+
+    .framework-step {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .framework-step:last-child { border-bottom: none; }
+    .step-num {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .step-title { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.3rem; }
+    .step-desc { font-size: 0.83rem; color: var(--slate2); line-height: 1.6; }
+
+    .analytics-row {
+      display: flex;
+      gap: 1rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--line);
+      align-items: flex-start;
+    }
+    .analytics-row:last-child { border-bottom: none; }
+    .a-cat {
+      min-width: 130px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      padding-top: 2px;
+    }
+    .a-test { font-size: 0.83rem; color: var(--slate); line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Rishabh <span>Inai</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html" class="active">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--navy); padding:4rem 2rem 3rem;">
+  <div class="page-wrapper">
+    <p style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Fraud & AML</p>
+    <h1 style="font-family:var(--display); font-size:clamp(2rem,4vw,3rem); color:var(--white); margin-bottom:0.8rem; line-height:1.1;">Investigation Intelligence</h1>
+    <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; max-width:560px; line-height:1.7;">
+      Mortgage fraud typologies, AML investigation methodology, forensic analytics frameworks, and PMLA compliance — built from 7+ years at the frontlines of financial crime in Indian BFSI.
+    </p>
+  </div>
+</div>
+
+<!-- WHY IT MATTERS -->
+<section>
+  <div class="page-wrapper">
+    <div class="grid-3" style="margin-bottom:0;">
+      <div class="card" style="text-align:center; padding:2rem;">
+        <div style="font-family:var(--display); font-size:2rem; color:var(--navy); margin-bottom:0.4rem;">38</div>
+        <div style="font-size:0.8rem; color:var(--slate2);">Fraud typologies across 7 categories mapped for Indian mortgage finance</div>
+      </div>
+      <div class="card" style="text-align:center; padding:2rem;">
+        <div style="font-family:var(--display); font-size:2rem; color:var(--navy); margin-bottom:0.4rem;">₹244M<span style="color:var(--gold);">+</span></div>
+        <div style="font-size:0.8rem; color:var(--slate2);">Total fraud portfolio reviewed and classified across 54 investigated cases</div>
+      </div>
+      <div class="card" style="text-align:center; padding:2rem;">
+        <div style="font-family:var(--display); font-size:2rem; color:var(--navy); margin-bottom:0.4rem;">PMLA</div>
+        <div style="font-size:0.8rem; color:var(--slate2);">STR / FIU-IND reporting, EWS design, NHB circular compliance — end-to-end</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- TYPOLOGY FRAMEWORK -->
+<section>
+  <div class="page-wrapper">
+    <p class="section-eyebrow">Fraud Typologies</p>
+    <h2 class="section-title">Mortgage Fraud Framework</h2>
+    <p class="section-sub" style="margin-bottom:2rem;">
+      A 38-typology compendium built from investigated cases and regulatory guidance — now the internal classification standard for mortgage fraud in Indian HFCs. All cases shown are anonymised.
+    </p>
+    <div class="typology-grid">
+      <div class="typo-card">
+        <div class="typo-header">
+          <span class="typo-icon">📄</span>
+          <span class="typo-title">Document & Identity Fraud</span>
+          <span class="typo-count">8 types</span>
+        </div>
+        <ul class="typo-body">
+          <li>Fabricated income documents (salary slips, ITRs)</li>
+          <li>Forged property title deeds and encumbrance certificates</li>
+          <li>Synthetic identity construction using real PAN/Aadhaar</li>
+          <li>Manipulation of bank statements (digital & physical)</li>
+          <li>Duplicate property registration / CERSAI mismatches</li>
+        </ul>
+      </div>
+      <div class="typo-card">
+        <div class="typo-header">
+          <span class="typo-icon">🏠</span>
+          <span class="typo-title">Property & Valuation Fraud</span>
+          <span class="typo-count">7 types</span>
+        </div>
+        <ul class="typo-body">
+          <li>Inflated property valuation by colluding valuers</li>
+          <li>Sale of already-mortgaged property (double financing)</li>
+          <li>Fictitious property transactions to launder proceeds</li>
+          <li>Under-construction property with inflated progress claims</li>
+          <li>Non-existent property used as collateral</li>
+        </ul>
+      </div>
+      <div class="typo-card">
+        <div class="typo-header">
+          <span class="typo-icon">🤝</span>
+          <span class="typo-title">Builder / Developer Collusion</span>
+          <span class="typo-count">6 types</span>
+        </div>
+        <ul class="typo-body">
+          <li>Ghost buyer schemes — fictitious end-borrowers</li>
+          <li>Kickback arrangements with sales teams</li>
+          <li>Project diversion of disbursed funds</li>
+          <li>Circular transactions between related entities</li>
+          <li>Inflated construction cost certificates</li>
+        </ul>
+      </div>
+      <div class="typo-card">
+        <div class="typo-header">
+          <span class="typo-icon">🏦</span>
+          <span class="typo-title">AML / Fund Flow Patterns</span>
+          <span class="typo-count">7 types</span>
+        </div>
+        <ul class="typo-body">
+          <li>Structuring / smurfing below STR thresholds</li>
+          <li>Rapid in-and-out fund cycling through accounts</li>
+          <li>Shell entity layering in fund flow chain</li>
+          <li>Loan proceeds used to repay prior fraudulent loans</li>
+          <li>Suspicious cash-to-cheque conversion patterns</li>
+        </ul>
+      </div>
+      <div class="typo-card">
+        <div class="typo-header">
+          <span class="typo-icon">👤</span>
+          <span class="typo-title">Third-Party Facilitation</span>
+          <span class="typo-count">5 types</span>
+        </div>
+        <ul class="typo-body">
+          <li>Rogue Direct Marketing Associates (DMAs)</li>
+          <li>Legal / valuer professional misconduct</li>
+          <li>Chartered Accountant certificate forgery</li>
+          <li>Loan aggregator-driven identity fraud</li>
+          <li>Collusive staff involvement in document manipulation</li>
+        </ul>
+      </div>
+      <div class="typo-card">
+        <div class="typo-header">
+          <span class="typo-icon">⚠️</span>
+          <span class="typo-title">Borrower Intent Fraud</span>
+          <span class="typo-count">5 types</span>
+        </div>
+        <ul class="typo-body">
+          <li>Loan stacking — simultaneous multi-lender borrowing</li>
+          <li>End-use diversion of sanctioned loan amount</li>
+          <li>Strategic default post-disbursement</li>
+          <li>Misrepresentation of property usage (commercial as residential)</li>
+          <li>Nominee / benami borrower arrangements</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- INVESTIGATION METHODOLOGY -->
+<section>
+  <div class="page-wrapper">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start;">
+      <div>
+        <p class="section-eyebrow">Investigation Process</p>
+        <h2 class="section-title">How I Investigate</h2>
+        <p style="color:var(--slate); font-size:0.9rem; margin-bottom:1.5rem; line-height:1.7;">
+          A structured, evidence-led approach — from initial alert through STR filing. Every investigation is documented to withstand regulatory scrutiny and legal proceedings.
+        </p>
+        <div>
+          <div class="framework-step">
+            <div class="step-num">01</div>
+            <div>
+              <div class="step-title">Alert Triage & EWS Trigger</div>
+              <div class="step-desc">Classify incoming alerts by typology and risk tier. Apply Early Warning System criteria per NHB Circular No.9/2022-23. Determine investigation priority and resource allocation.</div>
+            </div>
+          </div>
+          <div class="framework-step">
+            <div class="step-num">02</div>
+            <div>
+              <div class="step-title">Forensic Document Analysis</div>
+              <div class="step-desc">Use StaffLens for bank statement forensics — detecting self-transfers, round-trip funds, UPI patterns. Cross-validate income documents, ITRs, CERSAI records, and property title chains.</div>
+            </div>
+          </div>
+          <div class="framework-step">
+            <div class="step-num">03</div>
+            <div>
+              <div class="step-title">Fund Flow Mapping</div>
+              <div class="step-desc">Reconstruct end-to-end money movement. Identify layering patterns, shell entity involvement, and suspicious timing. Apply structuring / smurfing detection logic for AML patterns.</div>
+            </div>
+          </div>
+          <div class="framework-step">
+            <div class="step-num">04</div>
+            <div>
+              <div class="step-title">STR / FIU-IND Reporting</div>
+              <div class="step-desc">Draft Suspicious Transaction Reports under PMLA obligations. Ensure compliance with FIU-IND reporting timelines, category codes, and narrative standards.</div>
+            </div>
+          </div>
+          <div class="framework-step">
+            <div class="step-num">05</div>
+            <div>
+              <div class="step-title">Classification & Control Recommendation</div>
+              <div class="step-desc">Classify case against the 38-typology compendium. Prepare investigation report with evidence matrix. Recommend preventive controls, policy changes, or DMA/staff action.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="section-eyebrow">Forensic Analytics</p>
+        <h2 class="section-title">Analytics Tests Applied</h2>
+        <p style="color:var(--slate); font-size:0.9rem; margin-bottom:1.5rem; line-height:1.7;">
+          Data-driven tests applied across investigation categories — building on AML Certificate Course methodology and BFSI-specific fraud patterns.
+        </p>
+
+        <div class="analytics-row">
+          <div class="a-cat">Bank Statements</div>
+          <div class="a-test">Self-transfer detection across 8 banks, round-trip fund analysis, UPI mobile extraction, cash deposit clustering, end-of-month balance manipulation</div>
+        </div>
+        <div class="analytics-row">
+          <div class="a-cat">AML / PMLA</div>
+          <div class="a-test">Structuring below STR thresholds, rapid in-and-out pattern, geo-velocity anomalies, entity link analysis for shell structures, KYC inconsistency checks</div>
+        </div>
+        <div class="analytics-row">
+          <div class="a-cat">Property</div>
+          <div class="a-test">CERSAI encumbrance cross-check, duplicate mortgage detection, valuation deviation from market benchmarks, circle rate vs reported value</div>
+        </div>
+        <div class="analytics-row">
+          <div class="a-cat">DMA Integrity</div>
+          <div class="a-test">Jaro-Winkler name deduplication, geographic clustering of DMA-sourced loans, case conversion rate outliers, document quality scoring</div>
+        </div>
+        <div class="analytics-row">
+          <div class="a-cat">Income Docs</div>
+          <div class="a-test">ITR vs salary slip cross-validation, employer PAN verification, TDS certificate consistency, Form 26AS reconciliation</div>
+        </div>
+        <div class="analytics-row">
+          <div class="a-cat">Portfolio</div>
+          <div class="a-test">Early delinquency patterns, geographic fraud concentration, loan-to-value outliers, co-borrower relationship flags, builder exposure clustering</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- AML FRAMEWORK -->
+<section style="background:var(--navy); padding:4rem 0;">
+  <div class="page-wrapper">
+    <p style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Regulatory Compliance</p>
+    <h2 style="font-family:var(--display); font-size:clamp(1.5rem,3vw,2rem); color:var(--white); margin-bottom:0.8rem;">AML & Compliance Framework</h2>
+    <p style="color:rgba(255,255,255,0.55); font-size:0.9rem; max-width:540px; margin-bottom:2.5rem; line-height:1.7;">Operating within India's regulatory framework for housing finance companies — PMLA, NHB, FIU-IND, and FATF alignment.</p>
+    <div class="grid-3">
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--r-lg); padding:1.5rem;">
+        <div style="font-size:1.2rem; margin-bottom:0.75rem;">📋</div>
+        <div style="font-size:0.88rem; font-weight:600; color:var(--white); margin-bottom:0.4rem;">PMLA & STR Filing</div>
+        <div style="font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.6;">End-to-end Suspicious Transaction Report drafting and submission to FIU-IND. Compliance with PMLA 2002 reporting obligations and category classification standards.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--r-lg); padding:1.5rem;">
+        <div style="font-size:1.2rem; margin-bottom:0.75rem;">🏦</div>
+        <div style="font-size:0.88rem; font-weight:600; color:var(--white); margin-bottom:0.4rem;">NHB Circular Compliance</div>
+        <div style="font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.6;">EWS framework design per NHB Circular No.9/2022-23. AHF Scheme B refinance audit with 7-year tenure cap compliance gap identification.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--r-lg); padding:1.5rem;">
+        <div style="font-size:1.2rem; margin-bottom:0.75rem;">🔗</div>
+        <div style="font-size:0.88rem; font-weight:600; color:var(--white); margin-bottom:0.4rem;">CERSAI & Property Registry</div>
+        <div style="font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.6;">Central Registry of Securitisation integration for encumbrance verification, duplicate mortgage detection, and property chain validation in investigations.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--r-lg); padding:1.5rem;">
+        <div style="font-size:1.2rem; margin-bottom:0.75rem;">🌐</div>
+        <div style="font-size:0.88rem; font-weight:600; color:var(--white); margin-bottom:0.4rem;">FATF Framework</div>
+        <div style="font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.6;">Application of FATF 40 Recommendations and Mutual Evaluation Report framework to Indian HFC AML compliance design.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--r-lg); padding:1.5rem;">
+        <div style="font-size:1.2rem; margin-bottom:0.75rem;">🛡️</div>
+        <div style="font-size:0.88rem; font-weight:600; color:var(--white); margin-bottom:0.4rem;">RBI Fraud Risk Directions</div>
+        <div style="font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.6;">EWS framework benchmarked against RBI Master Directions on Fraud Risk Management. Early detection, escalation protocol, and reporting timelines.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--r-lg); padding:1.5rem;">
+        <div style="font-size:1.2rem; margin-bottom:0.75rem;">🔍</div>
+        <div style="font-size:0.88rem; font-weight:600; color:var(--white); margin-bottom:0.4rem;">CFE Methodology</div>
+        <div style="font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.6;">Applying ACFE fraud examination standards — witness interviews, document review, fraud theory approach, and evidence chain of custody to complex case investigations.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Rishabh Inai</div>
+      <div class="footer-tagline">CA · CFE · Lead Investigator · AI Tool Builder</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-inner" style="padding-top:0;">
+    <div class="footer-copy">
+      © 2026 Rishabh Inai. All case references are anonymised. Views are personal and do not represent the views of my employer.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
