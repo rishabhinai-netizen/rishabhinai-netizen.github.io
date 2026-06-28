@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights — Rishabh Inai</title>
+  <meta name="description" content="Thought leadership on fraud investigation, AML compliance, AI-powered forensic tools, and systematic equity trading — by Rishabh Inai, CA, CFE." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .blog-card:hover { box-shadow: 0 6px 24px rgba(15,27,45,0.08); }
+    .blog-header {
+      padding: 2rem 2rem 0;
+    }
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .blog-num {
+      width: 28px; height: 28px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .blog-cat { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); }
+    .blog-title { font-family: var(--display); font-size: 1.4rem; color: var(--navy); line-height: 1.2; margin-bottom: 0.75rem; }
+    .blog-intro { font-size: 0.88rem; color: var(--slate); line-height: 1.7; padding: 0 2rem 1.25rem; border-bottom: 1px solid var(--line); }
+    .blog-body { padding: 1.5rem 2rem 2rem; }
+    .blog-point {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .blog-point:last-child { border-bottom: none; }
+    .bp-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .bp-title { font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 0.2rem; }
+    .bp-text { font-size: 0.82rem; color: var(--slate2); line-height: 1.6; }
+    .blog-conclusion {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      background: #FFFDF7;
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      font-size: 0.85rem;
+      color: var(--navy);
+      line-height: 1.65;
+    }
+    .blog-conclusion strong { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Rishabh <span>Inai</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html" class="active">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--navy); padding:4rem 2rem 3rem;">
+  <div class="page-wrapper">
+    <p style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Insights</p>
+    <h1 style="font-family:var(--display); font-size:clamp(2rem,4vw,3rem); color:var(--white); margin-bottom:0.8rem; line-height:1.1;">On Fraud, Technology & Markets</h1>
+    <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; max-width:520px; line-height:1.7;">
+      Perspectives at the intersection of financial crime investigation, AI-powered compliance, and systematic equity research — written from 7+ years at the frontlines of BFSI fraud.
+    </p>
+    <p style="color:rgba(255,255,255,0.35); font-size:0.78rem; margin-top:1rem;">Views expressed are personal and do not reflect the views of my employer.</p>
+  </div>
+</div>
+
+<section>
+  <div class="page-wrapper" style="display:flex; flex-direction:column; gap:2rem;">
+
+    <!-- BLOG 1 -->
+    <div class="blog-card">
+      <div class="blog-header">
+        <div class="blog-meta">
+          <div class="blog-num">01</div>
+          <span class="blog-cat">Mortgage Fraud · BFSI</span>
+          <span style="margin-left:auto; font-size:0.72rem; color:var(--slate2);">June 2026</span>
+        </div>
+        <div class="blog-title">The Anatomy of Mortgage Fraud in Indian Housing Finance</div>
+      </div>
+      <div class="blog-intro">
+        India's housing finance sector has grown at an extraordinary pace — and fraud has grown alongside it. Unlike corporate fraud, mortgage fraud in India rarely involves a single bad actor. It is almost always a network: a borrower, a DMA, sometimes a valuer, and occasionally an insider. Understanding the anatomy of this network is the first step to dismantling it.
+      </div>
+      <div class="blog-body">
+        <div class="blog-point">
+          <span class="bp-icon">🏠</span>
+          <div>
+            <div class="bp-title">The Document Layer — Where Fraud Begins</div>
+            <div class="bp-text">Most mortgage fraud originates in the document stack — forged salary slips, manipulated bank statements, and fabricated ITRs. The sophisticated actor doesn't create obviously fake documents; they create plausible ones that pass a cursory review. The tell is usually in the metadata: font inconsistencies, round-number salary figures, and bank statement balances that don't reflect realistic savings patterns relative to income.</div>
+          </div>
+        </div>
+        <div class="blog-point">
+          <span class="bp-icon">🤝</span>
+          <div>
+            <div class="bp-title">The DMA Problem — Your Distribution Network as Attack Surface</div>
+            <div class="bp-text">Direct Marketing Associates are the primary origination channel for most HFCs — and the primary fraud entry point. A rogue DMA has incentives aligned exactly opposite to the lender: they earn on disbursement, not repayment. Jaro-Winkler name deduplication across DMA registrations, geographic clustering of fraud-linked accounts, and conversion rate outlier analysis are the three most effective detective controls I've found.</div>
+          </div>
+        </div>
+        <div class="blog-point">
+          <span class="bp-icon">💸</span>
+          <div>
+            <div class="bp-title">The Fund Flow Pattern — The Forensic Signature</div>
+            <div class="bp-text">Every mortgage fraud that involves misappropriation of loan proceeds leaves a fund flow signature. Structuring below STR thresholds, rapid in-and-out movement within 24–72 hours of disbursement, and circular transfers through related accounts are the three most common patterns. Cross-bank self-transfer detection — especially across accounts the borrower hasn't disclosed — is where forensic bank statement analysis yields the clearest evidence.</div>
+          </div>
+        </div>
+        <div class="blog-point">
+          <span class="bp-icon">🔗</span>
+          <div>
+            <div class="bp-title">The CERSAI Gap — India's Underused Fraud Deterrent</div>
+            <div class="bp-text">The Central Registry of Securitisation Asset Reconstruction and Security Interest exists precisely to prevent double financing on the same property. Yet its systematic integration into pre-disbursement due diligence remains inconsistent across lenders. A CERSAI check that flags an existing encumbrance should be a hard stop — not a soft exception that gets waived for business reasons.</div>
+          </div>
+        </div>
+        <div class="blog-conclusion">
+          <strong>The bottom line:</strong> Mortgage fraud in India is a systems problem, not a people problem. No single control prevents it — what works is layered detection: document forensics, DMA screening, CERSAI verification, and post-disbursement fund flow monitoring operating simultaneously. The HFCs that will win on fraud prevention are the ones that build detection into origination, not investigation into default.
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOG 2 -->
+    <div class="blog-card">
+      <div class="blog-header">
+        <div class="blog-meta">
+          <div class="blog-num">02</div>
+          <span class="blog-cat">AML · AI · PMLA</span>
+          <span style="margin-left:auto; font-size:0.72rem; color:var(--slate2);">May 2026</span>
+        </div>
+        <div class="blog-title">How AI Is Changing Suspicious Transaction Reporting in India</div>
+      </div>
+      <div class="blog-intro">
+        The FIU-IND received over 11 lakh Suspicious Transaction Reports in FY2024. A significant portion were filed to cover regulatory exposure, not because they were genuinely suspicious. AI doesn't fix that cultural problem — but it can fundamentally change the quality and speed of the reports that matter.
+      </div>
+      <div class="blog-body">
+        <div class="blog-point">
+          <span class="bp-icon">📋</span>
+          <div>
+            <div class="bp-title">The STR Drafting Problem</div>
+            <div class="bp-text">A well-drafted STR requires the investigator to construct a coherent narrative — the who, what, how, and why of suspicious behaviour — often under time pressure and with fragmented data across multiple systems. Most investigators are excellent at investigation but not at structured narrative writing. An AI model given a clear fund flow summary, the PMLA category codes, and the relevant account history can produce a first draft in seconds that the investigator then refines. That's not replacing judgment — it's removing the blank-page problem.</div>
+          </div>
+        </div>
+        <div class="blog-point">
+          <span class="bp-icon">🔍</span>
+          <div>
+            <div class="bp-title">Pattern Detection at Scale</div>
+            <div class="bp-text">The most sophisticated AML evasion techniques exploit the gap between what a human can review and what the transaction volume demands. A structuring scheme running ₹2–3 lakh per transaction across 40 accounts over 90 days is invisible to manual review but trivial to detect with the right query. The challenge isn't the detection algorithm — it's the data quality and integration that feeds it.</div>
+          </div>
+        </div>
+        <div class="blog-point">
+          <span class="bp-icon">🤖</span>
+          <div>
+            <div class="bp-title">What AI Does Well — and What It Doesn't</div>
+            <div class="bp-text">AI is excellent at pattern surface, narrative construction, classification assistance, and regulatory cross-referencing. It is poor at exercising judgment about context — whether an unusual transaction is suspicious or simply reflects a life event the algorithm doesn't understand. The investigator's judgment remains irreplaceable; AI is the force multiplier that handles the volume so the investigator can focus on the cases that actually matter.</div>
+          </div>
+        </div>
+        <div class="blog-point">
+          <span class="bp-icon">🏦</span>
+          <div>
+            <div class="bp-title">The Indian Context — HFCs and the PMLA Gap</div>
+            <div class="bp-text">Housing Finance Companies have historically had less mature AML infrastructure than scheduled commercial banks. The NHB's increasing regulatory focus and the PMLA 2002 obligations that apply equally to HFCs mean that the compliance gap is narrowing fast — but the tooling gap persists. Most HFCs are still running STR workflows on spreadsheets and institutional knowledge. That's the gap I've been building tools to close.</div>
+          </div>
+        </div>
+        <div class="blog-conclusion">
+          <strong>The bottom line:</strong> AI in AML for Indian financial institutions is not a future state — it's a present opportunity that most institutions are leaving on the table. The regulatory expectation is moving faster than the technology adoption curve. The HFCs and NBFCs that invest in structured AI-assisted compliance workflows now will be better positioned for the next FATF Mutual Evaluation than those waiting for a packaged solution.
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOG 3 -->
+    <div class="blog-card">
+      <div class="blog-header">
+        <div class="blog-meta">
+          <div class="blog-num">03</div>
+          <span class="blog-cat">AI Tools · BFSI · No-Code</span>
+          <span style="margin-left:auto; font-size:0.72rem; color:var(--slate2);">April 2026</span>
+        </div>
+        <div class="blog-title">Building No-Code Forensic Tools for BFSI Investigation Teams</div>
+      </div>
+      <div class="blog-intro">
+        The average fraud investigation team in an Indian BFSI institution has access to Excel, a core banking system login, and a shared folder. They are asked to investigate increasingly complex cases — multi-lender fraud networks, sophisticated bank statement manipulation, shell entity structures — with tools that haven't changed in a decade. The gap between what investigators need and what technology teams can deliver (at the pace investigators need it) is where no-code and low-code tooling becomes genuinely transformative.
+      </div>
+      <div class="blog-body">
+        <div class="blog-point">
+          <span class="bp-icon">🛠️</span>
+          <div>
+            <div class="bp-title">The Single-File HTML Principle</div>
+            <div class="bp-text">Every internal forensic tool I've built is a single HTML file that runs entirely in the browser — no server, no installation, no IT approval process. An investigator downloads the file, opens it in Chrome, and has a working tool. This sounds like a constraint but is actually the right architecture for the BFSI context: investigation teams operate in restricted environments where deploying cloud tools requires months of security review. A self-contained HTML file bypasses that entirely while keeping all data local.</div>
+          </div>
+        </div>
+        <div class="blog-point">
+          <span class="bp-icon">🔬</span>
+          <div>
+            <div class="bp-title">What StaffLens Taught Me About Forensic UX</div>
+            <div class="bp-text">When I built StaffLens — the bank statement forensic analysis tool — the first version was technically correct but unusable. Investigators had to understand the detection logic to interpret the output. The second version restructured the output around investigator workflow: flagged transactions first, with plain-English explanations of why each was flagged. The lesson: forensic tools built for experts still need to present findings as if to a generalist. The expert then validates the machine's work, not the other way around.</div>
+          </div>
+        </div>
+        <div class="blog-point">
+          <span class="bp-icon">⚡</span>
+          <div>
+            <div class="bp-title">The Claude API as Investigation Analyst</div>
+            <div class="bp-text">The AML Knowledge Hub experiment — using Claude via Groq API as a conversational compliance assistant — revealed something important: the most useful AI interaction for investigators is not "summarise this document" but "here is this fund flow pattern, what PMLA category does it map to, and what additional evidence should I be looking for?" That specificity of query design is what separates useful AI integration from a glorified search engine.</div>
+          </div>
+        </div>
+        <div class="blog-point">
+          <span class="bp-icon">📈</span>
+          <div>
+            <div class="bp-title">The Dual Stack Advantage</div>
+            <div class="bp-text">Having built both fraud investigation tools and equity analytics platforms, I've found that the mental model transfers in unexpected ways. The pattern detection logic in StaffLens (cross-bank self-transfers, round-trip funds) uses the same algorithmic thinking as the structuring detection in CARA (rapid in-and-out fund cycling in F&O positions). Financial crime and market microstructure share more DNA than either field typically acknowledges.</div>
+          </div>
+        </div>
+        <div class="blog-conclusion">
+          <strong>The bottom line:</strong> The best forensic tools for BFSI teams aren't the most sophisticated — they're the ones that investigators actually use. Single-file offline deployment, workflow-first UX, and AI assistance focused on specific investigative queries are the three design principles that have made the difference in everything I've shipped. The technology isn't the barrier; the design thinking is.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Rishabh Inai</div>
+      <div class="footer-tagline">CA · CFE · Lead Investigator · AI Tool Builder</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-inner" style="padding-top:0;">
+    <div class="footer-copy">
+      © 2026 Rishabh Inai. Views expressed are personal and do not reflect the views of my employer.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
