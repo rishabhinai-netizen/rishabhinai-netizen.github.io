@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools I've Built — Rishabh Inai</title>
+  <meta name="description" content="Live AI-powered forensic and trading tools built by Rishabh Inai — StaffLens, MaturityLens, ValuGuard, AlphaRadar, NSE Scanner Pro, CARA, TradeOS, and more." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .tool-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s;
+    }
+    .tool-card:hover {
+      box-shadow: 0 6px 24px rgba(15,27,45,0.08);
+      border-color: var(--line2);
+      transform: translateY(-2px);
+    }
+    .tool-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      gap: 0.5rem;
+    }
+    .tool-name { font-size: 1rem; font-weight: 600; color: var(--navy); }
+    .tool-desc { font-size: 0.83rem; color: var(--slate2); line-height: 1.65; flex: 1; margin-bottom: 1rem; }
+    .tool-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+    .tool-link {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--navy2);
+      border: 1px solid var(--line2);
+      padding: 5px 12px;
+      border-radius: 6px;
+      transition: all 0.15s;
+    }
+    .tool-link:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .tool-link.disabled { color: var(--slate2); cursor: default; }
+    .tool-link.disabled:hover { background: transparent; color: var(--slate2); border-color: var(--line2); }
+
+    .category-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy);
+      padding: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .category-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Rishabh <span>Inai</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html" class="active">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--navy); padding:4rem 2rem 3rem;">
+  <div class="page-wrapper">
+    <p style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Tools I've Built</p>
+    <h1 style="font-family:var(--display); font-size:clamp(2rem,4vw,3rem); color:var(--white); margin-bottom:0.8rem; line-height:1.1;">From Idea to Live Product</h1>
+    <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; max-width:560px; line-height:1.7;">
+      Over ten tools built using Python, Streamlit, Supabase, Claude API, and HTML — solving real problems that no commercial product addresses, for fraud teams and equity traders in India.
+    </p>
+    <div style="display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap;">
+      <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:5px 14px; font-size:0.78rem; color:rgba(255,255,255,0.7);">🛡️ Forensic Tools</span>
+      <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:5px 14px; font-size:0.78rem; color:rgba(255,255,255,0.7);">📈 Equity Platforms</span>
+      <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:5px 14px; font-size:0.78rem; color:rgba(255,255,255,0.7);">🤖 AI-Powered</span>
+      <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:5px 14px; font-size:0.78rem; color:rgba(255,255,255,0.7);">🏦 BFSI-Specific</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="page-wrapper">
+
+    <!-- FORENSIC TOOLS -->
+    <div class="category-label">🛡️ Forensic & Fraud Investigation Tools</div>
+    <div class="grid-3">
+
+      <div class="tool-card card-gold">
+        <div class="tool-card-top">
+          <div class="tool-name">StaffLens</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          Bank statement forensic analysis tool with cross-bank self-transfer detection across 8 banks, UPI mobile number extraction, round-trip fund flagging, cash deposit clustering, and an 8-sheet Excel export. Built for fraud investigation teams investigating employee and borrower bank accounts.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">HTML / Offline</span>
+          <span class="tag">No Server</span>
+          <span class="tag">Excel Export</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Forensic</span>
+          <span class="tool-link disabled">Internal Tool</span>
+        </div>
+      </div>
+
+      <div class="tool-card card-gold">
+        <div class="tool-card-top">
+          <div class="tool-name">MaturityLens</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          Fixed deposit payout audit tool with annual compounding, FY-aligned payout schedule engine, dual-TDS reconciliation (monthly + FY), and an embedded ICICI HFC FY26 holiday calendar. Audits FD payouts against expected compounding to detect manipulation or errors.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">HTML / Offline</span>
+          <span class="tag">FY-Aligned</span>
+          <span class="tag">TDS Reconciliation</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Audit</span>
+          <span class="tool-link disabled">Internal Tool</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">ValuGuard</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          Property valuation payout audit tool for HFCs. Cross-validates valuation reports against market benchmarks, circle rates, and historical disbursement patterns to flag inflated valuations or colluding valuers in mortgage fraud scenarios.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">HTML / Offline</span>
+          <span class="tag">Valuation Audit</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Forensic</span>
+          <span class="tool-link disabled">Internal Tool</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">DMA Scoring Engine</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          7-factor weighted risk scoring engine for Direct Marketing Associates. Features Jaro-Winkler fuzzy name deduplication to detect DMA alias registrations, geographic clustering analysis, and conversion rate outlier flagging. Used in mystery shopping programme design.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">HTML / Offline</span>
+          <span class="tag">Jaro-Winkler</span>
+          <span class="tag">Risk Scoring</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Risk</span>
+          <span class="tool-link disabled">Internal Tool</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">Branch Fraud Risk Tool</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          Branch-level fraud risk scoring framework that aggregates EWS triggers, case frequency, portfolio quality, and DMA risk signals to generate a composite risk score for each branch. Enables targeted investigation resource allocation.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">HTML / Offline</span>
+          <span class="tag">Composite Scoring</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Risk Intelligence</span>
+          <span class="tool-link disabled">Internal Tool</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">Khasra Portfolio Intelligence</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          Agricultural land intelligence tool for HFC portfolio analysis. Cross-references Khasra numbers against revenue records to identify fraudulent collateral, undisclosed agricultural encumbrances, and irregular land use reclassifications.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">HTML / Offline</span>
+          <span class="tag">Land Records</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Portfolio</span>
+          <span class="tool-link disabled">Internal Tool</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">VendorRecon</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          Vendor reconciliation tool for procurement fraud detection. Flags duplicate vendor registrations, shared PAN/bank accounts across vendors, round-number billing patterns, and vendor-employee address or phone matches.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">HTML / Offline</span>
+          <span class="tag">Duplicate Detection</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Procurement</span>
+          <span class="tool-link disabled">Internal Tool</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">AML Knowledge Hub</div>
+          <span class="live-badge"><span class="live-dot"></span>Deployed</span>
+        </div>
+        <div class="tool-desc">
+          An AI-powered AML knowledge assistant deployed on Netlify with a Cloudflare Worker proxy for the Groq API. Helps compliance professionals navigate PMLA, FATF, FIU-IND guidance, and AML investigation procedures through conversational queries.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">Netlify</span>
+          <span class="tag">Groq API</span>
+          <span class="tag">Cloudflare Worker</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-gold">AI-Powered</span>
+          <a href="#" class="tool-link">View →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- EQUITY & TRADING -->
+    <div class="category-label">📈 Equity Analytics & Trading Platforms</div>
+    <div class="grid-3">
+
+      <div class="tool-card card-gold">
+        <div class="tool-card-top">
+          <div class="tool-name">AlphaRadar</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          NSE equity scoring engine covering 750+ stocks using Weinstein Stage Analysis, O'Neil/Minervini methodology, and RS percentile ranking. Validated 100% accuracy on 15 test stocks. Includes N250F Fortnightly Momentum strategy (backtested ~29% CAGR), Manas Arora VCP/SVRO scanner, Nifty Total Market view, and N500 Strength Ranker.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">Streamlit</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Telegram Alerts</span>
+          <span class="tag">GitHub Actions</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Equity</span>
+          <a href="https://alpharadar.streamlit.app" target="_blank" rel="noopener" class="tool-link">Live App →</a>
+        </div>
+      </div>
+
+      <div class="tool-card card-gold">
+        <div class="tool-card-top">
+          <div class="tool-name">CARA F&O Intelligence</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          7-layer regime-adjusted F&O scoring engine for NSE derivatives. Layers: OI Trend, Bull/Bear Regime multiplier, PCR confirmation, F&O Delivery, Technical Levels, and Delivery Value Surge. Scores −6 to +6 with 1,477 signal rows seeded in Supabase. Key finding: market regime is the dominant alpha predictor.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">Streamlit</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Backtested</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">F&O</span>
+          <a href="https://cara.streamlit.app" target="_blank" rel="noopener" class="tool-link">Live App →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">NSE Scanner Pro</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          Multi-strategy NSE equity scanner using Breeze API with a Stock Quality Index (SQI ≥80 as systematic entry signal). Powered by Claude Haiku 4.5 (default) / Sonnet 4.6 (premium toggle). Includes circuit breaker states, trust scoring, regime history, and AI cost tracking. 16+ versions across its history.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">Streamlit</span>
+          <span class="tag">Breeze API</span>
+          <span class="tag">Claude API</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Scanner</span>
+          <a href="https://nsescannerbyrishabh.streamlit.app" target="_blank" rel="noopener" class="tool-link">Live App →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">ResultsEdge</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          NSE earnings intelligence platform with 10-parameter scoring (S1–S10) including walk-the-talk guidance scoring. Concall PDF parser uses Claude API with smart cache — skips API calls for already-processed ticker/quarter combinations. Covers Nifty 200/500 companies.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">Streamlit</span>
+          <span class="tag">Claude API</span>
+          <span class="tag">Supabase</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Earnings</span>
+          <a href="https://github.com/rishabhinai-netizen/resultsedge" target="_blank" rel="noopener" class="tool-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">TradeOS</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          Personal trading journal and analytics platform. Architecture: daily journaling via Claude conversational chat, Streamlit read-only dashboard for analytics. Primary strategy: PEAD (score ≥40 mandatory, exit within 2 min, MCap ≥₹2,000 Cr). NSE Scanner SQI ≥80 as systematic entry signal.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">Streamlit</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">PEAD Strategy</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-navy">Trading Journal</span>
+          <a href="https://tradeos.streamlit.app" target="_blank" rel="noopener" class="tool-link">Live App →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-top">
+          <div class="tool-name">CFE Exam Mastery</div>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="tool-desc">
+          A 25-day gated HTML study application for CFE exam preparation. Features 165 scenario-based questions across all 3 CFE sections (Financial Transactions, Law, Investigation), with daily unlock gates, section-wise progress tracking, and a 75% pass threshold enforcer per section.
+        </div>
+        <div class="tag-wrap" style="margin-bottom:1rem;">
+          <span class="tag">HTML / Offline</span>
+          <span class="tag">165 Questions</span>
+          <span class="tag">25-Day Gated</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tag tag-gold">Study App</span>
+          <span class="tool-link disabled">Personal Use</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PHILOSOPHY -->
+    <div style="background:var(--navy); border-radius:var(--r-lg); padding:2.5rem; margin-top:3rem;">
+      <p style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Build Philosophy</p>
+      <h3 style="font-family:var(--display); font-size:1.5rem; color:var(--white); margin-bottom:1rem;">Why I Build</h3>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.5rem;">
+        <div>
+          <div style="font-size:0.88rem; font-weight:600; color:var(--gold); margin-bottom:0.4rem;">Gap-First Thinking</div>
+          <div style="font-size:0.82rem; color:rgba(255,255,255,0.55); line-height:1.6;">Every tool I build addresses a gap that no commercial product covers — specifically in Indian HFC fraud operations and NSE-specific trading.</div>
+        </div>
+        <div>
+          <div style="font-size:0.88rem; font-weight:600; color:var(--gold); margin-bottom:0.4rem;">Offline-First for BFSI</div>
+          <div style="font-size:0.82rem; color:rgba(255,255,255,0.55); line-height:1.6;">Internal fraud tools are single-file HTML with zero server dependency — so investigation teams can use them in air-gapped or restricted environments.</div>
+        </div>
+        <div>
+          <div style="font-size:0.88rem; font-weight:600; color:var(--gold); margin-bottom:0.4rem;">AI as Force Multiplier</div>
+          <div style="font-size:0.82rem; color:rgba(255,255,255,0.55); line-height:1.6;">I use Claude, Groq, and GitHub Actions not for novelty but to remove real friction — from STR drafting to concall parsing to Telegram alerting at market open.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Rishabh Inai</div>
+      <div class="footer-tagline">CA · CFE · Lead Investigator · AI Tool Builder</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="investigation.html">Investigations</a>
+      <a href="tools.html">Tools</a>
+      <a href="markets.html">Markets</a>
+      <a href="blogs.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-inner" style="padding-top:0;">
+    <div class="footer-copy">
+      © 2026 Rishabh Inai. All materials are for knowledge-sharing and non-commercial use only.
+      Views expressed are personal and do not represent the views of my employer.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
