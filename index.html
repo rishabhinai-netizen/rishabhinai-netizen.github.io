@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rishabh Inai — Fraud Investigator · CA · CFE · AI Tool Builder</title>
-  <meta name="description" content="Rishabh Inai — Chartered Accountant, Certified Fraud Examiner (pursuing), Lead Investigator in financial crime with 7+ years in BFSI. Builder of AI-powered forensic and trading tools." />
-  <meta property="og:title" content="Rishabh Inai — Fraud Investigator · CA · AI Tool Builder" />
+  <title>Rishabh Agrawal — Fraud Investigator · CA · CFE · AI Tool Builder</title>
+  <meta name="description" content="Rishabh Agrawal — Chartered Accountant, Certified Fraud Examiner, Lead Investigator in financial crime with 7+ years in BFSI. Builder of AI-powered forensic and trading tools." />
+  <meta property="og:title" content="Rishabh Agrawal — Fraud Investigator · CA · AI Tool Builder" />
   <meta property="og:description" content="CA · CFE · AML — Lead Investigator in financial crime and builder of AI-powered forensic tools for Indian BFSI." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rishabhinai.github.io/" />
@@ -90,19 +90,30 @@
       width: 200px;
       height: 240px;
       border-radius: var(--r-lg);
-      background: var(--tag-bg);
-      border: 2px dashed var(--line2);
+      background: linear-gradient(160deg, var(--navy) 0%, #1c2f4a 100%);
+      border: 1px solid var(--line2);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      color: var(--slate2);
+      color: var(--white);
       font-size: 0.78rem;
       text-align: center;
       gap: 8px;
     }
-    .hero-photo-wrap svg { opacity: 0.4; }
+    .hero-photo-wrap .monogram {
+      font-family: var(--display);
+      font-size: 3rem;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+    }
+    .hero-photo-wrap .monogram-sub {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.5);
+    }
     .hero-photo-wrap img {
       width: 100%;
       height: 100%;
@@ -180,7 +191,7 @@
 <!-- ── NAV ── -->
 <nav>
   <div class="nav-inner">
-    <a class="nav-brand" href="index.html">Rishabh <span>Inai</span></a>
+    <a class="nav-brand" href="index.html">Rishabh <span>Agrawal</span></a>
     <div class="nav-links" id="navLinks">
       <a href="index.html" class="active">Home</a>
       <a href="portfolio.html">Portfolio</a>
@@ -203,7 +214,7 @@
     <div class="hero-inner">
       <div>
         <p class="hero-kicker">Mumbai, India · Financial Crime & Fintech</p>
-        <h1 class="hero-name">Rishabh Inai</h1>
+        <h1 class="hero-name">Rishabh Agrawal</h1>
         <div class="hero-creds" id="credPills" role="text" aria-label="Credentials">
           <!-- filled by JS -->
         </div>
@@ -216,10 +227,8 @@
         </div>
       </div>
       <div class="hero-photo-wrap" id="photoWrap">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-        <span>Photo coming soon</span>
+        <div class="monogram">RA</div>
+        <div class="monogram-sub">Rishabh Agrawal</div>
       </div>
     </div>
   </div>
@@ -271,7 +280,7 @@
           Beyond investigations, I am deeply passionate about applying AI and no-code technology to financial crime problems. I have built over ten live tools — including StaffLens, MaturityLens, ValuGuard, and a suite of equity analytics platforms — that combine Python, Supabase, Streamlit, and Claude APIs to solve real problems that no commercial product addresses.
         </p>
         <p style="color:var(--slate); line-height:1.8; margin-bottom:1.5rem;">
-          I am currently pursuing the <strong>Certified Fraud Examiner (CFE)</strong> designation and the <strong>AICA Level 2</strong> AI certification from ICAI, alongside active systematic equity trading using my own backtested frameworks.
+          I hold the <strong>Certified Fraud Examiner (CFE)</strong> designation and have completed the <strong>AML Certificate Course</strong> and both levels of the <strong>AICA</strong> AI certification from ICAI, alongside active systematic equity trading using my own backtested frameworks.
         </p>
         <div class="tag-wrap">
           <span class="tag">Fraud Investigation</span>
@@ -293,9 +302,9 @@
         <div class="card card-gold" style="margin-top:1.25rem;">
           <div style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold); margin-bottom:0.6rem;">Current Focus</div>
           <ul style="display:flex; flex-direction:column; gap:0.6rem;">
-            <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> CFE Exam — 25-day structured prep, Law domain intensive</li>
+            <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> IPO Share — live IPO analytics tracker on Streamlit</li>
             <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> CARA F&O Dashboard — daily signal pipeline integration</li>
-            <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> ICAI AICA Level 2 — AI certification</li>
+            <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> ResultsEdge — expanding to Nifty 500 coverage</li>
             <li style="font-size:0.85rem; color:var(--slate); display:flex; gap:8px;"><span style="color:var(--gold);">→</span> AlphaRadar — expanding Nifty 500 scoring engine</li>
           </ul>
         </div>
@@ -359,14 +368,14 @@
         <span class="ach-icon">🏆</span>
         <div>
           <div class="ach-title">₹244M+ Fraud Portfolio Classified</div>
-          <div class="ach-desc">Investigated and classified 54 fraud cases totalling ₹244.1M, presented at ICICI Group Fraud Prevention Forum across a 12-slide deck shared with senior leadership.</div>
+          <div class="ach-desc">Investigated and classified 54 fraud cases totalling ₹244.1M, presented at a leading NBFC group's Fraud Prevention Forum across a 12-slide deck shared with senior leadership.</div>
         </div>
       </div>
       <div class="ach-card">
         <span class="ach-icon">📋</span>
         <div>
           <div class="ach-title">38-Typology Fraud Compendium</div>
-          <div class="ach-desc">Built a comprehensive mortgage fraud reference across 7 categories and 38 typologies — now the internal standard for investigation classification at ICICI HFC.</div>
+          <div class="ach-desc">Built a comprehensive mortgage fraud reference across 7 categories and 38 typologies — now the internal standard for investigation classification at a leading NBFC.</div>
         </div>
       </div>
       <div class="ach-card">
@@ -393,7 +402,7 @@
       <div class="ach-card">
         <span class="ach-icon">🎤</span>
         <div>
-          <div class="ach-title">ICICI Group Fraud Prevention Forum</div>
+          <div class="ach-title">NBFC Group Fraud Prevention Forum</div>
           <div class="ach-desc">Presented fraud intelligence findings to senior leadership — a 12-slide deck covering 54 classified cases and pattern analysis across mortgage fraud categories.</div>
         </div>
       </div>
@@ -413,7 +422,7 @@
       Based in Mumbai · Usually responds within 24 hours.
     </p>
     <div style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center;">
-      <a href="https://linkedin.com/in/rishabhinai" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn →</a>
+      <a href="https://www.linkedin.com/in/rishabh-agrawal-ca/" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn →</a>
       <a href="https://github.com/rishabhinai-netizen" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
       <a href="contact.html" class="btn btn-outline">Contact Form</a>
     </div>
@@ -425,7 +434,7 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">Rishabh Inai</div>
+      <div class="footer-brand">Rishabh Agrawal</div>
       <div class="footer-tagline">CA · CFE · Lead Investigator · AI Tool Builder</div>
     </div>
     <div class="footer-links">
@@ -440,7 +449,7 @@
   </div>
   <div class="footer-inner" style="padding-top:0;">
     <div class="footer-copy">
-      © 2026 Rishabh Inai. All materials are for knowledge-sharing and non-commercial use only.
+      © 2026 Rishabh Agrawal. All materials are for knowledge-sharing and non-commercial use only.
       Views expressed are personal and do not represent the views of my employer.
     </div>
   </div>
@@ -453,7 +462,7 @@
   });
 
   // Credential pills typewriter
-  const creds = ['CA', 'CFE (Pursuing)', 'AML Specialist', 'Lead Investigator', 'AI Tool Builder', 'AICA Level 2'];
+  const creds = ['CA', 'CFE', 'AML Specialist', 'Lead Investigator', 'AI Tool Builder', 'AICA Level 2'];
   const container = document.getElementById('credPills');
   creds.forEach((c, i) => {
     const pill = document.createElement('span');
